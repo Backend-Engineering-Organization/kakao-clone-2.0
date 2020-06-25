@@ -1,0 +1,7 @@
+{
+  "[json]": {},
+  "launch": {
+    "editor.formatonsave": true
+  },
+  "editor.codeActionsOnSave": null
+}
