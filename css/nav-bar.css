@@ -1,0 +1,15 @@
+.nav {
+  /* 기본적으로 position: fixed는 element를 기존 다른 것들에서부터 떼어내서,
+    다른 레이어에 올려놔야 하니까 width는 무조건 설정해야한다.*/
+  position: fixed;
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 20px 50px;
+  left: 0px;
+  bottom: 0px;
+  border-top: 1px solid #f7f7f7;
+}
+
+.nav .nav__list {
+  display: flex;
+}
