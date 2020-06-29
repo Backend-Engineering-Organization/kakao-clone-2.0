@@ -47,6 +47,24 @@
   right: 10px;
 }
 
+@keyframes float {
+  0% {
+    box-shadow: 0px 30px 60px -12px rgba(50, 50, 92, 0.25),
+      0px 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0px 30px 60px -60px rgba(50, 50, 92, 0.25),
+      0px 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    box-shadow: 0px 30px 60px -12px rgba(50, 50, 92, 0.25),
+      0px 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.25);
+  }
+}
+
 .chat__write {
   margin: 0 auto;
   bottom: 0px;
@@ -63,12 +81,12 @@
 .chat__write:focus {
   outline: none;
   width: 80%;
-
   transform: translateY(-100px);
   border-radius: 40px;
   box-shadow: 0px 30px 60px -12px rgba(50, 50, 92, 0.25),
     0px 18px 36px -18px rgba(0, 0, 0, 0.3),
     0 -12px 36px -8px rgba(0, 0, 0, 0.25);
+  animation: float 3s linear infinite forwards;
 }
 
 /* 아이콘이 input다음에 있어야만 transition효과줄수 있음 */
@@ -169,4 +187,34 @@
   /* 채팅창 받는이 메세지모양 바꾸기  */
   border-bottom-right-radius: 0px;
   background-image: linear-gradient(to left, #3a7bd5, #00d2ff);
+}
+
+@keyframes incomingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.incoming-message {
+  animation: incomingAnim 0.5s ease-out forwards;
+}
+
+@keyframes sentAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sent-message {
+  animation: sentAnimation 0.5s ease-out forwards;
 }
