@@ -21,6 +21,6 @@ z-index:4;
 /* 픽셀이 최소 550이거나 그 이상이면 'make your screen small'  */
 @media screen and (min-width:550px){
     .bigScreen{
-        display:flex;
+        display:flex; 
     }
 }
